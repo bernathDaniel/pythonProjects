@@ -1,8 +1,29 @@
 HOW TO PUSH NEW EDITED FILES TO GITHUB CLOUD
 
+suppose I edited a file and I wanna update it, I would want to first use 'cd' to go to
+my repository (the directory I made into a repository with "git init" = initializing repository).
+
+then after I edited the file, I can go into Bash through windows terminal
+and input "git status" in my master branch.
+
+there I will see that my file has been edited, and then I can just input: "git add ."
+where the "." means all files gets committed, at this point it doesn't bother me since I have
+nothing to hide, and I want to share my projects on GitHub.
+
+once I'm finished with adding / stacking I want to commit using the input:
+"git commit -m <"Insert message"> the message is what type of change I made to the files.
+
 If I have my stuff I can just push them with the following code:
 
-git branch -m master main
-git fetch origin
-git branch -u origin/main main
-git remote set-head origin -a
+git branch -M master - This one changes the branch name to master.
+
+git remote add origin <insert URL>.git -> This one is to name the cloud repo as origin and to help
+link between my local repo and the cloud repo on the Hub.
+
+git push -u origin master -> pushes my local repo to the cloud repo, but only the master branch.
+if I have other branches I want to push I need to input: "git push -all"
+
+That's it for now.
+
+Also I can edit the files within GitHub but only do it efficiently with files like this one.
+I guess that for other files I'd want to work in my coding environment.
